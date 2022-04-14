@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Compare Product</title>
+    <link rel="icon" href="images/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}
+    </style>
+    <style>
+      html {
+        font-family: Open Sans;
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.625;
+        color: var(--dl-color-secondary-400);
+        background-color: var(--dl-color-gray-white);
+
+      }
+      .title1{
+ 	color: rgb(255, 0, 0);
+	font-size: 47px;
+	-webkit-text-stroke: 1px #F8F8F8;
+	text-shadow: 0px 2px 4px rgb(255, 255, 255);
+  margin-left: 80px;
+}
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"> 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+    />
+    <style>
+      html * {
+          -webkit-font-smoothing: antialiased;
+      }
+      input::placeholder, textarea::placeholder {
+         color: #d2d6da;
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./compare.css" rel="stylesheet" />
+
+      <div class="profile-container" style="background-image: url(https://images.unsplash.com/photo-1530879730070-f7fabab0568b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);background-repeat: no-repeat;background-size: cover;">
+        <div data-role="Header" class="header-header">
+          <nav class="header-nav">
+            <div class="header-container">
+              <img
+                alt="image"
+                src="images/logo.png"
+                class="header-image"
+              />
+              <a href="home.html" class="header-navlink">
+                <span class="header-text">Blooming</span>
+                <span class="header-text1" style="color: black;">Petals</span>
+              </a>
+            </div>
+            <div class="header-container1">
+              <div class="header-menu">
+                <a href="home.html" class="header-navlink1 large" style="color: black;" >Home</a>
+                <a class="nav-link dropdown-toggle btn1 animate slidein" style="color: black;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Flowers
+                </a>
+                <ul class="dropdown-menu bg-danger" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="Flower everyday.html">Everyday</a></li>
+                  <li><a class="dropdown-item" href="flower Romance.html">Romance</a></li>
+                  <li><a class="dropdown-item" href="flower prom.html">Prom</a></li>
+                </ul>
+                <a href="#" class="header-navlink3 large" style="color: black;">
+                  Compare Our Products
+                </a>
+                <a class="nav-link dropdown-toggle table-hover btn1 animate slidein" style="color: black;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Themes
+                </a>
+                <ul class="dropdown-menu bg-danger " aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="Birthday.html">Birthday Celebrations</a></li>
+                  <li><a class="dropdown-item" href="Aniversery.html">Marriage anniversary</a></li>
+                  <li><a class="dropdown-item" href="shadi.html">Shadi</a></li>
+                </ul>
+                <a href="Gallery.html" class="header-navlink1 large" style="color: black;">Gallery</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="profile-contact"></div>
+        <div class="profile-container1" style="height: 1300px;">
+          <div class="container"> 
+            <h1 class="text-center display-3 text-uppercase my-5  title1">Compare page</h1> 
+         
+        <div class="row"> 
+            <div class="col-lg-6 col-md-12"> 
+                <div class="form-group" >  
+                    <select id="brand1" onchange="Brand_One()" class="form-select" style="background-color: #eec0c6;
+                    background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+                    "data-aos="zoom-in-right"> 
+                        <option selected>Select...</option> 
+                        <optgroup label="Birthday Pacakges">
+                        <option>LUXURY PLAN</option> 
+                        <option>DREAM PLAN</option> 
+                        <option>ROYAL PLAN</option> 
+                        </optgroup>
+                        <optgroup label="Shadi Pacakges">
+                          <option>LUXURY PLAN</option> 
+                          <option>DREAM PLAN</option> 
+                          <option>ROYAL PLAN</option> 
+                          </optgroup>
+                          <optgroup label="Anniversary Pacakges">
+                            <option>LUXURY PLAN</option> 
+                            <option>DREAM PLAN</option> 
+                            <option>ROYAL PLAN</option> 
+                            </optgroup>
+                    </select> 
+                     
+                </div> 
+             
+                    <div class="form-group"> 
+                        <div class="card" style="background-color: #eec0c6;
+                        background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);border: 1px solid;
+                        padding: 10px;
+                        box-shadow: 5px 10px #888888;
+                        "data-aos="zoom-in-right"> 
+                            <div class="card-body text-center"> 
+                                <img src="" class="img-fluid text-center" id="img1" style="border-radius: 5px;"> 
+                                <div class="card-title text-center"> 
+                                    <h1 id="text1"></h1> 
+                                    <h5 id="text2"></h5> 
+                                    <p id="text3"></p> 
+                                    <p id="text4"></p> 
+                                    <p id="text5"></p> 
+                                    <p id="text11"></p>
+                                    <p id="text12"></p>
+                                    <p id="text13"></p>
+                                    <a href="Birthday.html"><button class="btn btn-danger w-50">Learn More</button></a> 
+                                </div>
+                            </div> 
+                        </div>                 
+                    </div> 
+         
+             
+         
+            </div> 
+         
+            <div class="col-lg-6 col-md-12"> 
+                <div class="form-group"> 
+                    <select id="brand2" onchange="Brand_two()" class="form-select" style="background-color: #eec0c6;
+                    background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+                    "data-aos="zoom-in-left"> 
+                      <option selected>Select...</option> 
+                      <optgroup label="Birthday Pacakges">
+                      <option>LUXURY PLAN</option> 
+                      <option>DREAM PLAN</option> 
+                      <option>ROYAL PLAN</option> 
+                      </optgroup>
+                      <optgroup label="Shadi Pacakges">
+                        <option>LUXURY PLAN</option> 
+                        <option>DREAM PLAN</option> 
+                        <option>ROYAL PLAN</option> 
+                        </optgroup>
+                        <optgroup label="Anniversary Pacakges">
+                          <option>LUXURY PLAN</option> 
+                          <option>DREAM PLAN</option> 
+                          <option>ROYAL PLAN</option> 
+                          </optgroup> 
+                    </select> 
+                     
+                </div> 
+             
+                <div class="form-group"> 
+                    <div class="card" style="background-color: #eec0c6;
+                    background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);border: 1px solid;
+                      padding: 10px;
+                      box-shadow: 5px 10px #888888;
+                    "data-aos="zoom-in-left"> 
+                        <div class="card-body text-center"> 
+                            <img src="" class="img-fluid text-center" id="img2" style="border-radius: 5px;"> 
+                            <div class="card-title text-center"> 
+                                <h1 id="text6"></h1> 
+                                <h5 id="text7"></h5> 
+                                <p id="text8"></p> 
+                                <p id="text9"></p>
+                                <p id="text10"></p>
+                                <p id="text14"></p> 
+                                <p id="text15"></p>
+                                <p id="text16"></p>
+                                <a href="Birthday.html"><button class="btn btn-danger w-50">Learn More</button></a>
+                              </div> 
+                          </div> 
+                      </div>                 
+                    </div>
+              </div> 
+            </div>   
+                </div> 
+                <script> 
+            	function Brand_One() 
+            	{         
+            
+                        var Productone=document.getElementById("brand1").selectedIndex; 
+                         var Producttwo=document.getElementById("brand2").selectedIndex; 
+            
+            	if(Productone==Producttwo) 
+            	{ 
+            	swal({ 
+            	title: "Sorry", 
+            	text: "Same Product not compare", 
+            	icon: "warning", 
+            	buttons: true, 
+            	dangerMode: true, 
+            	}); 
+            	} 
+            	if(Productone==1) 
+            	{ 
+            	document.getElementById("img1").src="https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; 
+            	document.getElementById("text1").innerHTML="LUXURY PACKAGE"; 
+            	document.getElementById("text2").innerHTML="2,000$"; 
+            	document.getElementById("text3").innerHTML=" Best locations for your Birthday.";
+              document.getElementById("text4").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text5").innerHTML="Normal Tour Near the hall";
+              document.getElementById("text11").innerHTML="8/10, because of the play gym in Mc Donalds kids always have a good time. And almost every kid loves happy meal";
+              document.getElementById("text12").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text13").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them."; 
+            	} 
+            	if(Productone==2) 
+            	{ 
+            	document.getElementById("img1").src="https://images.pexels.com/photos/414706/pexels-photo-414706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; 
+            	document.getElementById("text1").innerHTML="DREAM PACKAGE"; 
+            	document.getElementById("text2").innerHTML="20,000$"; 
+            	document.getElementById("text3").innerHTML="Best locations for your Birthday";
+              document.getElementById("text4").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text5").innerHTML=" Luxurious Yacht Tour";
+              document.getElementById("text11").innerHTML="gathering at Hyatt hotels";
+              document.getElementById("text12").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text13").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them."; 
+                        } 
+                    
+                    if(Productone==3) 
+            	{ 
+            	document.getElementById("img1").src="https://images.pexels.com/photos/5610382/pexels-photo-5610382.jpeg?auto=compress&cs=tinysrgb&w=600"; 
+            	document.getElementById("text1").innerHTML="ROYAL PACKAGE"; 
+            	document.getElementById("text2").innerHTML="4,000$"; 
+            	document.getElementById("text3").innerHTML="Best locations for your Birthday.";
+              document.getElementById("text4").innerHTML="20+ Dishes and Dessert";
+              document.getElementById("text5").innerHTML="top-notch service"; 
+              document.getElementById("text11").innerHTML="8/10, because of the play gym in Mc Donalds kids always have a good time. And almost every kid loves happy meal";
+              document.getElementById("text12").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text13").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                        } 
+                     
+                    if(Productone==4) 
+            	{ 
+            	document.getElementById("img1").src="https://images.pexels.com/photos/169196/pexels-photo-169196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";  
+            	document.getElementById("text1").innerHTML="LUXURY PACKAGE"; 
+            	document.getElementById("text2").innerHTML="20,000$"; 
+            	document.getElementById("text3").innerHTML=" Best locations for your marriage ceremony.";
+              document.getElementById("text4").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text5").innerHTML="Normal Tour Near the hall";
+              document.getElementById("text11").innerHTML="Our Banquet halls represent the finest banquet facilities that the city has to offer, with pleasant views of the surroundings.";
+              document.getElementById("text12").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text13").innerHTML="Our board rooms are of the highest corporate standards and the ambiance of best quality wood used in the finishing and attention to details provided by our interior designers has really succeeded in creating an atmosphere that aids in successful business dealings.";
+                        } 
+                     
+                    if(Productone==5) 
+            	{ 
+            	document.getElementById("img1").src="https://images.pexels.com/photos/2291462/pexels-photo-2291462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; 
+            	document.getElementById("text1").innerHTML="DREAM PACKAGE"; 
+            	document.getElementById("text2").innerHTML="120,000$"; 
+            	document.getElementById("text3").innerHTML="Best locations for your marriage ceremony ";
+              document.getElementById("text4").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text5").innerHTML=" Luxurious Yacht Tour";
+              document.getElementById("text11").innerHTML="gathering at Hyatt hotels";
+              document.getElementById("text12").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text13").innerHTML="Our Banquet halls represent the finest banquet facilities that the city has to offer, with pleasant views of the surroundings."; 
+                        } 
+                     
+                    if(Productone==6) 
+            	{ 
+            	document.getElementById("img1").src="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; 
+            	document.getElementById("text1").innerHTML="ROYAL PACKAGE"; 
+            	document.getElementById("text2").innerHTML="8,000$"; 
+            	document.getElementById("text3").innerHTML="Best locations for your marriage ceremony.";
+              document.getElementById("text4").innerHTML="20+ Dishes and Dessert";
+              document.getElementById("text5").innerHTML="top-notch service"; 
+              document.getElementById("text11").innerHTML="Our board rooms are of the highest corporate standards and the ambiance of best quality wood used in the finishing and attention to details provided by our interior designers has really succeeded in creating an atmosphere that aids in successful business dealings.";
+              document.getElementById("text12").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text13").innerHTML="Our Banquet halls represent the finest banquet facilities that the city has to offer, with pleasant views of the surroundings.";
+                        } 
+                     
+                    if(Productone==7) 
+            	{ 
+            	document.getElementById("img1").src="https://wallpaperaccess.com/full/3250515.jpg"; 
+            	document.getElementById("text1").innerHTML="LUXURY PACKAGE"; 
+            	document.getElementById("text2").innerHTML="2,000$"; 
+            	document.getElementById("text3").innerHTML=" Best locations for your Birthday.";
+              document.getElementById("text4").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text5").innerHTML="Normal Tour Near the hall";
+              document.getElementById("text11").innerHTML="8/10, because of the play gym in Mc Donalds kids always have a good time. And almost every kid loves happy meal";
+              document.getElementById("text12").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text13").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                        } 
+                    
+                    if(Productone==8) 
+            	{ 
+            	document.getElementById("img1").src="https://wallpaperaccess.com/full/3732077.jpg"; 
+            	document.getElementById("text1").innerHTML="DREAM PACKAGE"; 
+            	document.getElementById("text2").innerHTML="20,000$"; 
+            	document.getElementById("text3").innerHTML="Best locations for your Birthday";
+              document.getElementById("text4").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text5").innerHTML=" Luxurious Yacht Tour";
+              document.getElementById("text11").innerHTML="gathering at Hyatt hotels";
+              document.getElementById("text12").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text13").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them."; 
+                        } 
+                     
+                    if(Productone==9) 
+            	{ 
+            	document.getElementById("img1").src="https://wallpaperaccess.com/full/3732080.jpg"; 
+            	document.getElementById("text1").innerHTML="ROYAL PACKAGE"; 
+            	document.getElementById("text2").innerHTML="4,000$"; 
+            	document.getElementById("text3").innerHTML="Best locations for your Birthday.";
+              document.getElementById("text4").innerHTML="20+ Dishes and Dessert";
+              document.getElementById("text5").innerHTML="top-notch service"; 
+              document.getElementById("text11").innerHTML="8/10, because of the play gym in Mc Donalds kids always have a good time. And almost every kid loves happy meal";
+              document.getElementById("text12").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text13").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                        }
+                      } 
+                     
+            	function Brand_two() 
+            	{ 
+                 var Productone=document.getElementById("brand1").selectedIndex;        
+                 var Producttwo=document.getElementById("brand2").selectedIndex; 
+
+            if(Producttwo==Productone)            { 
+        	swal({ 
+	        title: "Sorry", 
+	        text: "Same Product not compare", 
+        	icon: "warning", 
+          buttons: true, 
+	        dangerMode: true, 
+        	}); 
+          }
+          if(Producttwo==1) 
+          { 
+          document.getElementById("img2").src="https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; 
+          document.getElementById("text6").innerHTML="LUXURY PACKAGE"; 
+            	document.getElementById("text7").innerHTML="2,000$"; 
+            	document.getElementById("text8").innerHTML=" Best locations for your Birthday.";
+              document.getElementById("text9").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text10").innerHTML="Normal Tour Near the hall";
+              document.getElementById("text14").innerHTML="8/10, because of the play gym in Mc Donalds kids always have a good time. And almost every kid loves happy meal";
+              document.getElementById("text15").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text16").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+          } 
+          if(Producttwo==2) 
+          { 
+          document.getElementById("img2").src="https://images.pexels.com/photos/414706/pexels-photo-414706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; 
+          document.getElementById("text6").innerHTML="DREAM PACKAGE"; 
+            	document.getElementById("text7").innerHTML="20,000$"; 
+            	document.getElementById("text8").innerHTML="Best locations for your Birthday";
+              document.getElementById("text9").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text10").innerHTML=" Luxurious Yacht Tour";
+              document.getElementById("text14").innerHTML="gathering at Hyatt hotels";
+              document.getElementById("text15").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text16").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                    } 
+                    if(Producttwo==3) 
+          { 
+          document.getElementById("img2").src="https://images.pexels.com/photos/5610382/pexels-photo-5610382.jpeg?auto=compress&cs=tinysrgb&w=600"; 
+          document.getElementById("text6").innerHTML="ROYAL PACKAGE"; 
+            	document.getElementById("text7").innerHTML="4,000$"; 
+            	document.getElementById("text8").innerHTML="Best locations for your Birthday";
+              document.getElementById("text9").innerHTML="20+ Dishes and Dessert";
+              document.getElementById("text10").innerHTML="top-notch service ";
+              document.getElementById("text14").innerHTML="8/10, because of the play gym in Mc Donalds kids always have a good time. And almost every kid loves happy meal";
+              document.getElementById("text15").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text16").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                    } 
+                     
+                    if(Producttwo==4) 
+            	{ 
+            	document.getElementById("img2").src="https://images.pexels.com/photos/169196/pexels-photo-169196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; 
+            	document.getElementById("text6").innerHTML="LUXURY PACKAGE"; 
+            	document.getElementById("text7").innerHTML="2,000$"; 
+            	document.getElementById("text8").innerHTML=" Best locations for your Birthday.";
+              document.getElementById("text9").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text10").innerHTML="Normal Tour Near the hall";
+              document.getElementById("text14").innerHTML="8/10, because of the play gym in Mc Donalds kids always have a good time. And almost every kid loves happy meal";
+              document.getElementById("text15").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text16").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                        } 
+                     
+                    if(Producttwo==5) 
+            	{ 
+            	document.getElementById("img2").src="https://images.pexels.com/photos/2291462/pexels-photo-2291462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; 
+            	document.getElementById("text6").innerHTML="DREAM PACKAGE"; 
+            	document.getElementById("text7").innerHTML="20,000$"; 
+            	document.getElementById("text8").innerHTML="Best locations for your Birthday";
+              document.getElementById("text9").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text10").innerHTML=" Luxurious Yacht Tour";
+              document.getElementById("text14").innerHTML="gathering at Hyatt hotels";
+              document.getElementById("text15").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text16").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                        } 
+                     
+                    if(Producttwo==6) 
+            	{ 
+            	document.getElementById("img2").src="https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; 
+              document.getElementById("text6").innerHTML="ROYAL PACKAGE"; 
+            	document.getElementById("text7").innerHTML="4,000$"; 
+            	document.getElementById("text8").innerHTML="Best locations for your Birthday";
+              document.getElementById("text9").innerHTML="20+ Dishes and Dessert";
+              document.getElementById("text10").innerHTML="top-notch service ";
+              document.getElementById("text14").innerHTML="8/10, because of the play gym in Mc Donalds kids always have a good time. And almost every kid loves happy meal";
+              document.getElementById("text15").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text16").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                        } 
+                     
+                    if(Producttwo==7) 
+            	{ 
+            	document.getElementById("img2").src="https://wallpaperaccess.com/full/3250515.jpg"; 
+            	document.getElementById("text6").innerHTML="LUXURY PACKAGE"; 
+            	document.getElementById("text7").innerHTML="2,000$"; 
+            	document.getElementById("text8").innerHTML=" Best locations for your Birthday.";
+              document.getElementById("text9").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text10").innerHTML="Normal Tour Near the hall";
+              document.getElementById("text14").innerHTML="8/10, because of the play gym in Mc Donalds kids always have a good time. And almost every kid loves happy meal";
+              document.getElementById("text15").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text16").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                        } 
+                    
+                    if(Producttwo==8) 
+            	{ 
+            	document.getElementById("img2").src="https://wallpaperaccess.com/full/3732077.jpg"; 
+            	document.getElementById("text6").innerHTML="DREAM PACKAGE"; 
+            	document.getElementById("text7").innerHTML="20,000$"; 
+            	document.getElementById("text8").innerHTML="Best locations for your Birthday";
+              document.getElementById("text9").innerHTML="143+ Dishes and Dessert";
+              document.getElementById("text10").innerHTML=" Luxurious Yacht Tour";
+              document.getElementById("text14").innerHTML="gathering at Hyatt hotels";
+              document.getElementById("text15").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text16").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                        } 
+                     
+                    if(Producttwo==9) 
+            	{ 
+            	document.getElementById("img2").src="https://wallpaperaccess.com/full/3732080.jpg"; 
+              document.getElementById("text6").innerHTML="ROYAL PACKAGE"; 
+            	document.getElementById("text7").innerHTML="4,000$"; 
+            	document.getElementById("text8").innerHTML="Best locations for your Birthday";
+              document.getElementById("text9").innerHTML="20+ Dishes and Dessert";
+              document.getElementById("text10").innerHTML="top-notch service ";
+              document.getElementById("text14").innerHTML="8/10, because of the play gym in Mc Donalds kids always have a good time. And almost every kid loves happy meal";
+              document.getElementById("text15").innerHTML="10/10, very good actually, always ready on time, clean, good air conditioning, and an amazing staff.";
+              document.getElementById("text16").innerHTML="10/10 every kid loves Sindbad and knowing that you can have one whole hour to sit on any ride and for as long as you want. It’s definitely a big treat for them.";
+                        }
+                      }
+                 
+              </script>         
+        </div>
+        <footer class="profile-footer">
+          <div class="profile-container2">
+            <div class="profile-logo"></div>
+            <h1 class="profile-text">Blooming Petals</h1>
+            <div class="profile-links-container">
+              <div class="profile-container3">
+                <div class="profile-product-container">
+                  <span class="profile-text1">packages</span>
+                  <span class="profile-text2">Personalized offers</span>
+                  <span class="profile-text3">Special deals</span>
+                </div>
+              </div>
+              <div class="profile-socials">
+                <span class="profile-text4">Follow Us</span>
+                <div class="profile-icon-group">
+                  <svg
+                    viewBox="0 0 950.8571428571428 1024"
+                    class="profile-icon"
+                  >
+                    <path
+                      d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                    ></path></svg>
+                  <svg
+                    viewBox="0 0 877.7142857142857 1024"
+                    class="profile-icon2"
+                  >
+                    <path
+                      d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                    ></path></svg>
+                  <svg
+                    viewBox="0 0 602.2582857142856 1024"
+                    class="profile-icon4"
+                  >
+                    <path
+                      d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="profile-container4">
+                <div class="profile-contact1"></div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  </body>
+</html>
